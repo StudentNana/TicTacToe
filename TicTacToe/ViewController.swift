@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     
     
     func updateMsg(){
-        msg.text = "The \(currentPlayer.name) turn!"
+        msg.text = "The \(currentPlayer.name)'s turn!"
     }
     
     func getAssetName() -> String {
@@ -151,6 +151,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named:"background")!)
+
         currentPlayer = player1
         updateMsg()
         clearBoard()
