@@ -132,6 +132,7 @@ class ViewController: UIViewController {
 
     @IBAction func newGame(_ sender: UIButton) {
         msg.text = "New Game!"
+        stopGame = false
         for image in images {
             image.image = nil
         }
