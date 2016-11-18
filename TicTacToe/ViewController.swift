@@ -54,6 +54,8 @@ class ViewController: UIViewController {
             return "o"
         }
     }
+    @IBOutlet var playAgain: UIButton!
+    
     
     func changePlayer(){
         if currentPlayer === player1{
@@ -74,6 +76,7 @@ class ViewController: UIViewController {
                 msgWin()
                 audioPlayerWin.play()
                 stopGame = true
+                playAgain.isHidden = false
             } else {
                 changePlayer()
                 updateMsg()
@@ -147,11 +150,13 @@ class ViewController: UIViewController {
         clearBoard()
         delayMsg()
         audioPlayerNewGame.play()
+        playAgain.isHidden = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"background")!)
+        playAgain.isHidden = true
 
         currentPlayer = player1
         updateMsg()
@@ -174,6 +179,15 @@ class ViewController: UIViewController {
             print("error")
         }
        
+        let button = UIButton(type: .custom)
+        button.frame = CGRect(x: 138, y: 535, width: 100, height: 100)
+        //button.layer.cornerRadius = 0.5 * button.bounds.size.width
+        button.clipsToBounds = true
+        button.setImage(UIImage(named:"roundBTN.jpg"), for: .normal)
+        button.addTarget(self, action: #selector(newGame), for: .touchUpInside)
+        view.addSubview(button)
+    
+   
         
     }
 

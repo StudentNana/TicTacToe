@@ -74,12 +74,12 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" tag="23" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTJ-g0-sW9">
-                                <frame key="frameInset" minX="125" minY="568" width="123" height="40"/>
+                            <button hidden="YES" opaque="NO" tag="23" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxE-N6-eSr">
+                                <frame key="frameInset" minX="92" minY="313" width="191" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.56638695100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.56470588235294117" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="New Game">
+                                <state key="normal" title="Let us play again!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -90,7 +90,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="newGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CJ6-mJ-Kgx"/>
+                                    <action selector="newGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Op-mk-ZNo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -107,6 +107,7 @@
                         <outlet property="a32" destination="bq4-FZ-cQX" id="uBb-tf-WaR"/>
                         <outlet property="a33" destination="Uge-xA-pJT" id="kAt-kA-sgR"/>
                         <outlet property="msg" destination="KF4-mr-IhV" id="tAr-0i-0Sc"/>
+                        <outlet property="playAgain" destination="fxE-N6-eSr" id="fYw-xA-9eH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -115,6 +116,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg" width="373" height="352"/>
+        <image name="bg" width="360" height="360"/>
     </resources>
 </document>
