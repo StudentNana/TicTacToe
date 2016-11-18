@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		396F66821DDF35F100049222 /* TTCwin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 396F66811DDF35F100049222 /* TTCwin.wav */; };
+		396F66841DDF3A3400049222 /* TTC_way.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 396F66831DDF3A3400049222 /* TTC_way.mp3 */; };
+		396F66861DDF3A5700049222 /* TTC_newGame.wav in Resources */ = {isa = PBXBuildFile; fileRef = 396F66851DDF3A5700049222 /* TTC_newGame.wav */; };
 		39A4DAD21DDB70D000980B73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A4DAD11DDB70D000980B73 /* AppDelegate.swift */; };
 		39A4DAD41DDB70D000980B73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A4DAD31DDB70D000980B73 /* ViewController.swift */; };
 		39A4DAD71DDB70D000980B73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A4DAD51DDB70D000980B73 /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		396F66811DDF35F100049222 /* TTCwin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TTCwin.wav; sourceTree = "<group>"; };
+		396F66831DDF3A3400049222 /* TTC_way.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TTC_way.mp3; sourceTree = "<group>"; };
+		396F66851DDF3A5700049222 /* TTC_newGame.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TTC_newGame.wav; sourceTree = "<group>"; };
 		39A4DACE1DDB70D000980B73 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39A4DAD11DDB70D000980B73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39A4DAD31DDB70D000980B73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +80,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		396F66801DDF2C7100049222 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				396F66831DDF3A3400049222 /* TTC_way.mp3 */,
+				396F66811DDF35F100049222 /* TTCwin.wav */,
+				396F66851DDF3A5700049222 /* TTC_newGame.wav */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
 		39A4DAC51DDB70D000980B73 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +119,7 @@
 				39A4DAD81DDB70D000980B73 /* Assets.xcassets */,
 				39A4DADA1DDB70D000980B73 /* LaunchScreen.storyboard */,
 				39A4DADD1DDB70D000980B73 /* Info.plist */,
+				396F66801DDF2C7100049222 /* Music */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -233,6 +250,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				39A4DADC1DDB70D000980B73 /* LaunchScreen.storyboard in Resources */,
+				396F66861DDF3A5700049222 /* TTC_newGame.wav in Resources */,
+				396F66841DDF3A3400049222 /* TTC_way.mp3 in Resources */,
+				396F66821DDF35F100049222 /* TTCwin.wav in Resources */,
 				39A4DAD91DDB70D000980B73 /* Assets.xcassets in Resources */,
 				39A4DAD71DDB70D000980B73 /* Main.storyboard in Resources */,
 			);
@@ -505,6 +525,7 @@
 				39A4DAF81DDB70D000980B73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39A4DAF91DDB70D000980B73 /* Build configuration list for PBXNativeTarget "TicTacToeTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +534,7 @@
 				39A4DAFB1DDB70D000980B73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39A4DAFC1DDB70D000980B73 /* Build configuration list for PBXNativeTarget "TicTacToeUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +543,7 @@
 				39A4DAFE1DDB70D000980B73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

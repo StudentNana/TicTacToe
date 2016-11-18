@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -37,6 +38,11 @@ class ViewController: UIViewController {
     let player2 = Player(name: "Player Two", way: Move.o)
     var currentPlayer = Player(name: "dummyPlayer", way: Move.x) //TODO: make constructor
     var stopGame:Bool = false
+    var audioPlayerNewGame = AVAudioPlayer()
+    var audioPlayerWin = AVAudioPlayer()
+    var audioPlayerWay = AVAudioPlayer()
+    
+    
     func updateMsg(){
         msg.text = "The \(currentPlayer.name) turn!"
     }
@@ -59,12 +65,14 @@ class ViewController: UIViewController {
     
     func tappedView(sender: UIGestureRecognizer){
         let imageView = sender.view as? UIImageView
+        audioPlayerWay.play()
         if imageView?.image == nil && !stopGame {
             imageView?.image = UIImage(named: getAssetName())
             let n = (imageView?.tag)! as Int
             updateBoard(tag: n)
             if (checkForWin()) {
                 msgWin()
+                audioPlayerWin.play()
                 stopGame = true
             } else {
                 changePlayer()
@@ -138,6 +146,7 @@ class ViewController: UIViewController {
         }
         clearBoard()
         delayMsg()
+        audioPlayerNewGame.play()
     }
     
     override func viewDidLoad() {
@@ -151,6 +160,18 @@ class ViewController: UIViewController {
             image.isUserInteractionEnabled = true
             image.addGestureRecognizer(tapGestureRecognizer)
         }
+        do {
+            audioPlayerNewGame = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "TTC_newGame", ofType: "wav")!))
+            audioPlayerWin = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "TTCwin", ofType: "wav")!))
+            audioPlayerWay = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "TTC_way", ofType: "mp3")!))
+            audioPlayerNewGame.prepareToPlay()
+            audioPlayerWin.prepareToPlay()
+            audioPlayerWay.prepareToPlay()
+        }
+        catch {
+            print("error")
+        }
+       
         
     }
 
